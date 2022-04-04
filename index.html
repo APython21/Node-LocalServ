@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    Ander Perez-Yarza Asumendi PEC1 Ej05
+<body>
+<img src="image.png" style="position:absolute;
+left:150px;top:100px"></div>
+<!-- Etiqueta Temp   -->
+<label
+style="position:absolute;left:85px;top:575px;font-family:arial">
+Temperatura (&#8451;) (&#49;)
+</label>
+<!-- Etiqueta Presión V1 -->
+<label 
+style="position:absolute;left:285px;top:575px;font-family:arial">
+Presostato V1 (&#66;&#65;&#82;)(&#50;)</label>
+<!-- Etiqueta Presión V2 -->
+<label 
+style="position:absolute;left:485px;top:575px;font-family:arial">
+Presostato V2(&#66;&#65;&#82;)(&#51;)</label>
+<!-- Etiqueta Presión V3 -->
+<label 
+style="position:absolute;left:685px;top:575px;font-family:arial">
+Presostato V3(&#66;&#65;&#82;)(&#52;)</label>
+<!-- (2) -->
+<label 
+style="position:absolute;left:485px;top:312px;font-family:arial">
+.(&#50;)</label>
+<!-- (3) -->
+<label 
+style="position:absolute;left:585px;top:312px;font-family:arial">
+.(&#51;)</label>
+<!-- (4) -->
+<label 
+style="position:absolute;left:535px;top:200px;font-family:arial">
+.(&#52;)</label>
+<!-- WG Gauges -->
+<!-- Gauge 01 Temp -->
+<wg-gauge id="gauge01" value="90"
+style="position:absolute;
+left:55px;top:580px;
+width:100px;height:80px"></wg-gauge>
+<!-- Gauge 02 V1 -->
+<wg-gauge id="gauge02" value="10"
+style="position:absolute;
+left:275px;top:580px;
+width:100px;height:80px"></wg-gauge>
+<!-- Gauge 03 V2 -->
+<wg-gauge id="gauge03" value="30"
+style="position:absolute;
+left:475px;top:580px;
+width:100px;height:80px"></wg-gauge>
+<!-- Gauge 02 V1 -->
+<wg-gauge id="gauge04" value="40"
+style="position:absolute;
+left:675px;top:580px;
+width:100px;height:80px"></wg-gauge>
+<!-- Button 1 Temp -->
+<button style="position:absolute;left:105px;top:680px"
+onclick="btnClickUp()">Consigna +10</button>
+<button style="position:absolute;left:105px;top:720px"
+onclick="btnClickDown()">Consigna -10</button>
+<!-- Button 2 PressV1 -->
+<button style="position:absolute;left:325px;top:680px"
+onclick="btnClickUp02()">Consigna +5</button>
+<button style="position:absolute;left:325px;top:720px"
+onclick="btnClickDown02()">Consigna -5</button>
+<!-- Button 2 PressV2 -->
+<button style="position:absolute;left:525px;top:680px"
+onclick="btnClickUp03()">Consigna +5</button>
+<button style="position:absolute;left:525px;top:720px"
+onclick="btnClickDown03()">Consigna -5</button>
+<!-- Button 2 PressV3 -->
+<button style="position:absolute;left:725px;top:680px"
+onclick="btnClickUp04()">Consigna +5</button>
+<button style="position:absolute;left:725px;top:720px"
+onclick="btnClickDown04()">Consigna -5</button>
+<!-- Import js gauge Script -->
+<script type="module">
+import {Gauge} from './Gauge.js';
+</script>
+<!-- Functional Button -->
+<!-- Button 1 Temp Func -->
+<script>
+let g = document.getElementById('gauge01');;
+function btnClickUp() {
+g.value = g.value + 10;
+}
+function btnClickDown() {
+g.value = g.value - 10;
+}
+</script>
+<!-- Button 2 BAR V1 Func -->
+<script>
+let h = document.getElementById('gauge02');;
+function btnClickUp02() {
+h.value = h.value + 5;
+}
+function btnClickDown02() {
+h.value = h.value - 5;
+}
+</script>
+<!-- Button 3 BAR V2 Func -->
+<script>
+let i = document.getElementById('gauge03');;
+function btnClickUp03() {
+i.value = i.value + 5;
+}
+function btnClickDown03() {
+i.value = i.value - 5;
+}
+</script>
+<!-- Button 3 BAR V3 Func -->
+<script>
+let j = document.getElementById('gauge04');;
+function btnClickUp04() {
+j.value = j.value + 5;
+}
+function btnClickDown04() {
+j.value = j.value - 5;
+}
+</script>
+</body>
+</html>
